@@ -3,54 +3,23 @@
 var speechHabitsControllers = angular.module('speechHabitsControllers', []);
 
 /*
- * Here's the controller displaying the list of available teachers
+ * Here's the controller displaying the list of available teachers.
+ * We use the availableTeachers service to retrieve the list of available teachers.
  */
-speechHabitsControllers.controller('TeachersListController', ['$scope',
-function($scope) {
-
-	$scope.message="Coucou!";
-
-	/**
-	 *Factory function that returns a newly created teacher with the specified name.
-	 *The returned teacher has 'id' and 'name' properties.
-	 * @param {String} name
-	 */
-	var makeNewTeacher = ( function() {
-
-			//private incrementor to generate IDs
-			var nextId = 0;
-
-			function makeNewId() {
-				var result = nextId;
-				nextId += 1;
-				return result;
-			};
-
-			return function(name) {
-				var currentId = makeNewId();
-
-				return {
-					'id' : currentId,
-					'name' : name
-				};
-			};
-		}());
+speechHabitsControllers.controller('TeachersListController', ['$scope','availableTeachers',
+function($scope,availableTeachers) {
 
 	/**
 	 * The list of available teachers.
 	 */
-	$scope.teachersList = [
-		makeNewTeacher("Philippe Ginier-Gillet"),
-		makeNewTeacher("Bruno Martinaud"),
-		makeNewTeacher("Chuck Norris")
-	];
+	$scope.teachersList = availableTeachers();
 }]);
 
 /**
  * Here we declare the controller for a single room.
  */
-speechHabitsControllers.controller('roomController', ['$scope', '$routeParams',
-function($scope, $routeParams) {
+speechHabitsControllers.controller('roomController', ['$scope', '$routeParams','teacherExpressions',
+function($scope, $routeParams, teacherExpressions) {
 
 	//retrieving the ID of the current teacher from the route parameters
 	var currentTeacherId = $routeParams['teacherId'];
@@ -61,13 +30,23 @@ function($scope, $routeParams) {
 	 */
 	function obtainExpressions(teacherId){
 		//current implementation is a mock : always returns the same expressions, without heeding the teacher id
-		return [
+		/*return [
 			newExpression("Basically"),
 			newExpression("By the way"),
 			newExpression("Somewhere, somehow"),
 			newExpression("At this point in time"),
 			newExpression("Having said that")
-		];
+		];*/
+		var expressions = teacherExpressions(teacherId);
+		var result = [];
+		var currentExpression;
+		
+		for(var i = 0; i < expressions.length; i++){
+			currentExpression = expressions[i];
+			result[i] = newExpression(currentExpression.text, currentExpression.id);
+		}
+		
+		return result;
 	};
 
 	function requestIncrement(exprId, incrementCallback){
@@ -82,19 +61,10 @@ function($scope, $routeParams) {
 	 * @param {String} exprText the text of the expression to create
 	 */
 	var newExpression = ( function() {
-			//private incrementor to generate IDs
-			var nextId = 0;
-
-			function makeNewId() {
-				var result = nextId;
-				nextId += 1;
-				return result;
-			};
 			
-			return function(exprText){
+			return function(exprText, myId){
 				// hidden variable for the counter
 				var myCounter = 0;
-				var myId = makeNewId();
 				
 				var incrementMe = function(){
 					myCounter += 1;
