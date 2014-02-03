@@ -1,0 +1,23 @@
+'use strict';
+
+/* Controllers */
+
+angular.module('myApp.controllers', []).
+  controller('MyCtrl1', ['$scope', function($scope) {
+      $scope.alert = function(){
+
+}
+  }])
+  .controller('MyCtrl2', [function() {
+
+  }])
+  /*
+   * Here's the controller displaying the list of available teachers
+   */
+  .controller('TeacherListController', ['$scope', function($scope){
+
+  }]);
+
+var speechHabitsControllers = angular.module('speechHabitsApp.controllers', []);
+
+speechHabitsControllers.controller('');

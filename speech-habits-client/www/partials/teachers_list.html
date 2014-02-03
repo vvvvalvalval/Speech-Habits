@@ -1,0 +1,11 @@
+<!-- Partial template displaying the list of available teachers and links to join their room. -->
+
+<div class="container center-block">
+
+	<h1>Choose a teacher!</h1>
+
+	<div ng-repeat="teacher in teachersList">
+		<a  href="#/rooms/{{teacher.id}}"> {{teacher.name}} </a>
+	</div>
+
+</div>
