@@ -16,8 +16,10 @@ var speechHabitsServices = angular.module('speechHabitsServices', []);
  */
 speechHabitsServices.factory('availableTeachers', ['mockData',
 function(mockData) {
-	return function() {
-		return mockData.getAllTeachers();
+	return function(teachersDataCallback) {
+		mockData(function(dataFacade){
+			teachersDataCallback(dataFacade.getAllTeachers());
+		});
 	};
 }]);
 
@@ -27,7 +29,12 @@ function(mockData) {
 speechHabitsServices.factory('teacherExpressions', ['mockData',
 function(mockData) {
 	return function(teacherId) {
-		return mockData.expressionsOf(teacherId);
+		return function(expressionsCallback){
+			mockData(function(dataFacade){
+				expressionsCallback(dataFacade.expressionsOf(teacherId));	
+			});
+			
+		};
 	};
 }]);
 
@@ -36,52 +43,7 @@ function(mockData) {
  */
 speechHabitsServices.factory('mockData', ['$http',
 function($http) {
-	var fixtureData = [{
-		"id" : 0,
-		"name" : "Philippe Ginier-Gillet",
-		"expressions" : [{
-			"id" : 0,
-			"text" : "Basically"
-		}, {
-			"id" : 1,
-			"text" : "By the way"
-		}, {
-			"id" : 2,
-			"text" : "Bloody hell"
-		}, {
-			"id" : 3,
-			"text" : "Somewhere somehow"
-		}, {
-			"id" : 4,
-			"text" : "You realize that"
-		}]
-	}, {
-		"id" : 1,
-		"name" : "Bruno Martinaud",
-		"expressions" : [{
-			"id" : 5,
-			"text" : "C'est très entrepreneurial"
-		}, {
-			"id" : 6,
-			"text" : "Silicon Valley"
-		}, {
-			"id" : 7,
-			"text" : "L'ADN de cette startup"
-		}]
-	}, {
-		"id" : 2,
-		"name" : "Chuck Norris",
-		"expressions" : [{
-			"id" : 8,
-			"text" : "Wesh"
-		}, {
-			"id" : 9,
-			"text" : "Nik sa reum"
-		}, {
-			"id" : 10,
-			"text" : "Pran sa dent ta gueule"
-		}]
-	}];
+	var fixtureData;
 
 	// A function that returns an array with all the teachers
 	function getAllTeachers() {
@@ -108,13 +70,27 @@ function($http) {
 		}
 	};
 
-	//This function returns
+	
 	function expressionsOf(teacherId) {
 		return findTeacherById(teacherId)['expressions'];
 	};
-
-	return {
+	
+	var dataFacade = {
 		'getAllTeachers' : getAllTeachers,
 		'expressionsOf' : expressionsOf
+	};
+	
+	return function(mockDataCallback){
+		/*
+		 * We load the data once : intercept, cache and invoke.
+		 */
+		if(fixtureData){
+			mockDataCallback(dataFacade);
+		} else {
+			$http.get('teachers-fixture.json').success(function(data){
+				fixtureData = data;
+				mockDataCallback(dataFacade);
+			});
+		}
 	};
 }]);

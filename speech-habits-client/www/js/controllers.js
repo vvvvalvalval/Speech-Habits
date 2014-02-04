@@ -10,9 +10,12 @@ speechHabitsControllers.controller('TeachersListController', ['$scope','availabl
 function($scope,availableTeachers) {
 
 	/**
-	 * The list of available teachers.
+	 * Getting the list of available teachers.
 	 */
-	$scope.teachersList = availableTeachers();
+	availableTeachers(function(teachersData){
+		$scope.teachersList = teachersData;
+	});
+	
 }]);
 
 /**
@@ -28,21 +31,12 @@ function($scope, $routeParams, teacherExpressions) {
 	 * 
 	 * @param {int} teacherId : the ID of the teacher whose expressions are to be fetched.
 	 */
-	function obtainExpressions(teacherId){
-		//current implementation is a mock : always returns the same expressions, without heeding the teacher id
-		/*return [
-			newExpression("Basically"),
-			newExpression("By the way"),
-			newExpression("Somewhere, somehow"),
-			newExpression("At this point in time"),
-			newExpression("Having said that")
-		];*/
-		var expressions = teacherExpressions(teacherId);
+	function makeExpressions(expressionsData){
 		var result = [];
 		var currentExpression;
 		
-		for(var i = 0; i < expressions.length; i++){
-			currentExpression = expressions[i];
+		for(var i = 0; i < expressionsData.length; i++){
+			currentExpression = expressionsData[i];
 			result[i] = newExpression(currentExpression.text, currentExpression.id);
 		}
 		
@@ -89,6 +83,8 @@ function($scope, $routeParams, teacherExpressions) {
 		}());
 	
 	//exposing the expressions of the teacher in scope
-	$scope.expressions = obtainExpressions(currentTeacherId);
+	teacherExpressions(currentTeacherId)(function(expressionsData){	
+		$scope.expressions = makeExpressions(expressionsData);
+	});
 		
 }]);
