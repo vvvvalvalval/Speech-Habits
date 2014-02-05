@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a98b9f83-9c15-4cb0-a746-489c24f25dc4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech-habits-client/www/js/app.js" afterPath="$PROJECT_DIR$/speech-habits-client/www/js/app.js" />
+    <list default="true" id="a98b9f83-9c15-4cb0-a746-489c24f25dc4" name="Default" comment="Factored out the (mock) increment request function into an AngularJS service.&#10;&#10;# Please enter the commit message for your changes. Lines starting&#10;# with '#' will be ignored, and an empty message aborts the commit.&#10;# On branch master&#10;# Changes to be committed:&#10;#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)&#10;#&#10;#&#9;modified:   speech-habits-client/www/js/controllers.js&#10;#&#9;modified:   speech-habits-client/www/js/services.js&#10;#&#9;deleted:    speech-habits-client/www/partials/partial1.html&#10;#&#9;deleted:    speech-habits-client/www/partials/partial2.html&#10;#&#9;modified:   speech-habits-client/www/partials/teachers_list.html&#10;#&#10;# Untracked files:&#10;#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)&#10;#&#10;#&#9;speech-habits-client/www/teachers-fixture.json&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/speech-habits-client/www/teachers-fixture.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech-habits-client/www/js/controllers.js" afterPath="$PROJECT_DIR$/speech-habits-client/www/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech-habits-client/www/index.html" afterPath="$PROJECT_DIR$/speech-habits-client/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech-habits-client/www/partials/room.html" afterPath="$PROJECT_DIR$/speech-habits-client/www/partials/room.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech-habits-client/www/js/services.js" afterPath="$PROJECT_DIR$/speech-habits-client/www/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="repo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,16 +31,34 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/speech-habits-client/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="54" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1020">
+            <state line="50" column="32" selection-start="2116" selection-end="2116" vertical-scroll-proportion="-14.0" vertical-offset="522" max-vertical-offset="1224">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="services.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/speech-habits-client/www/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.06629834" vertical-offset="0" max-vertical-offset="905">
+            <state line="115" column="48" selection-start="3966" selection-end="3966" vertical-scroll-proportion="0.92383295" vertical-offset="1694" max-vertical-offset="2322">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/speech-habits-client/www/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="0" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="558">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/speech-habits-client/www/js/controllers.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="33" selection-start="2045" selection-end="2045" vertical-scroll-proportion="0.0" vertical-offset="909" max-vertical-offset="1638">
               <folding />
             </state>
           </provider>
@@ -63,14 +80,18 @@
         <option value="$PROJECT_DIR$/speech-habits-angular/app/index.html" />
         <option value="$PROJECT_DIR$/speech-habits-client/www/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/speech-habits-client/www/coffeescript/app.coffee" />
+        <option value="$PROJECT_DIR$/speech-habits-client/www/js/app.js" />
+        <option value="$PROJECT_DIR$/speech-habits-client/www/js/controllers.js" />
+        <option value="$PROJECT_DIR$/speech-habits-client/www/js/services.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="53" />
     <option name="y" value="24" />
-    <option name="width" value="1227" />
-    <option name="height" value="1000" />
+    <option name="width" value="1313" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -98,6 +119,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -116,24 +147,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="speech-habits-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="speech-habits-client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistory" value="" />
+    <property name="LayoutCode.rearrangeEntriesJavaScript" value="false" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -144,15 +205,23 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="CHROME" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
@@ -165,6 +234,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="a98b9f83-9c15-4cb0-a746-489c24f25dc4" name="Default" comment="" />
@@ -174,14 +260,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="53" y="24" width="1227" height="1000" extended-state="6" />
-    <editor active="false" />
+    <frame x="53" y="24" width="1313" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32935917" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3323398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24938875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24904798" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -189,7 +277,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34365326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -208,6 +295,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Factored out the (mock) increment request function into an AngularJS service.&#10;&#10;# Please enter the commit message for your changes. Lines starting&#10;# with '#' will be ignored, and an empty message aborts the commit.&#10;# On branch master&#10;# Changes to be committed:&#10;#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)&#10;#&#10;#&#9;modified:   speech-habits-client/www/js/controllers.js&#10;#&#9;modified:   speech-habits-client/www/js/services.js&#10;#&#9;deleted:    speech-habits-client/www/partials/partial1.html&#10;#&#9;deleted:    speech-habits-client/www/partials/partial2.html&#10;#&#9;modified:   speech-habits-client/www/partials/teachers_list.html&#10;#&#10;# Untracked files:&#10;#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)&#10;#&#10;#&#9;speech-habits-client/www/teachers-fixture.json&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Factored out the (mock) increment request function into an AngularJS service.&#10;&#10;# Please enter the commit message for your changes. Lines starting&#10;# with '#' will be ignored, and an empty message aborts the commit.&#10;# On branch master&#10;# Changes to be committed:&#10;#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)&#10;#&#10;#&#9;modified:   speech-habits-client/www/js/controllers.js&#10;#&#9;modified:   speech-habits-client/www/js/services.js&#10;#&#9;deleted:    speech-habits-client/www/partials/partial1.html&#10;#&#9;deleted:    speech-habits-client/www/partials/partial2.html&#10;#&#9;modified:   speech-habits-client/www/partials/teachers_list.html&#10;#&#10;# Untracked files:&#10;#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)&#10;#&#10;#&#9;speech-habits-client/www/teachers-fixture.json&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -215,16 +304,153 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/speech-habits-client/www/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="54" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
+        <state line="59" column="17" selection-start="2448" selection-end="2448" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="16" selection-start="1794" selection-end="1794" vertical-scroll-proportion="0.0" vertical-offset="526" max-vertical-offset="1692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/partials/room.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="6" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="28" selection-start="63" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="1872">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/teachers-fixture.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="24" selection-start="226" selection-end="226" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1080" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="6" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="648" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="16" selection-start="1819" selection-end="1819" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="2178" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="11" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="17" selection-start="2448" selection-end="2448" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="16" selection-start="1794" selection-end="1794" vertical-scroll-proportion="0.0" vertical-offset="526" max-vertical-offset="1692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/partials/room.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="6" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="360" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="17" selection-start="1747" selection-end="1747" vertical-scroll-proportion="0.0" vertical-offset="1116" max-vertical-offset="1872">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/teachers-fixture.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="42" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="1080" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="11" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="54" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="27" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="22" selection-start="37" selection-end="37" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="1692">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105">
+        <state line="4" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="3" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1800">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="54" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="150" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/speech-habits-client/www/index.html">
@@ -236,9 +462,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/speech-habits-client/www/index.html">
@@ -250,9 +474,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/speech-habits-client/www/index.html">
@@ -264,9 +486,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105">
+        <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="54" selection-start="1365" selection-end="1365" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1080">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/speech-habits-client/www/index.html">
@@ -278,9 +510,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/speech-habits-client/www/spec/index.js">
@@ -293,16 +523,65 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="649" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/index.html">
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/partials/room.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="54" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1020">
-          <folding />
-        </state>
+        <state line="13" column="6" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="360" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.06629834" vertical-offset="0" max-vertical-offset="905">
+        <state line="4" column="0" selection-start="32" selection-end="32" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="11" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="847" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app/controllers/events_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="68" selection-end="68" vertical-scroll-proportion="0.10625738" vertical-offset="0" max-vertical-offset="847" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="16" selection-start="1819" selection-end="1819" vertical-scroll-proportion="0.98507464" vertical-offset="126" max-vertical-offset="2178" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="6" selection-start="118" selection-end="118" vertical-scroll-proportion="0.12337662" vertical-offset="32" max-vertical-offset="648" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/teachers-fixture.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="24" selection-start="70" selection-end="70" vertical-scroll-proportion="0.117263846" vertical-offset="0" max-vertical-offset="1080" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="32" selection-start="2116" selection-end="2116" vertical-scroll-proportion="-14.0" vertical-offset="522" max-vertical-offset="1224">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="33" selection-start="2045" selection-end="2045" vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1638">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech-habits-client/www/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="48" selection-start="3966" selection-end="3966" vertical-scroll-proportion="0.92383295" vertical-offset="1694" max-vertical-offset="2322">
           <folding />
         </state>
       </provider>

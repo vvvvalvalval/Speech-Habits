@@ -4,15 +4,15 @@ var speechHabitsControllers = angular.module('speechHabitsControllers', []);
 
 /*
  * Here's the controller displaying the list of available teachers.
- * We use the availableTeachers service to retrieve the list of available teachers.
+ * We use the fetchAvailableTeachers service to retrieve the list of available teachers.
  */
-speechHabitsControllers.controller('TeachersListController', ['$scope','availableTeachers',
-function($scope,availableTeachers) {
+speechHabitsControllers.controller('TeachersListController', ['$scope','fetchAvailableTeachers',
+function($scope,fetchAvailableTeachers) {
 
 	/**
 	 * Getting the list of available teachers.
 	 */
-	availableTeachers(function(teachersData){
+	fetchAvailableTeachers(function(teachersData){
 		$scope.teachersList = teachersData;
 	});
 	
@@ -21,16 +21,17 @@ function($scope,availableTeachers) {
 /**
  * Here we declare the controller for a single room.
  */
-speechHabitsControllers.controller('roomController', ['$scope', '$routeParams','teacherExpressions',
-function($scope, $routeParams, teacherExpressions) {
+speechHabitsControllers.controller('roomController', ['$scope', '$routeParams','fetchTeacherExpressions','requestIncrement',
+function($scope, $routeParams, fetchTeacherExpressions,requestIncrement) {
 
 	//retrieving the ID of the current teacher from the route parameters
 	var currentTeacherId = $routeParams['teacherId'];
 
-	/**
-	 * 
-	 * @param {int} teacherId : the ID of the teacher whose expressions are to be fetched.
-	 */
+    /**
+     * Reads the specified expressions data and converts them into an array of expression objects exposing methods fr incrementing.
+     * @param expressionsData
+     * @returns {Array}
+     */
 	function makeExpressions(expressionsData){
 		var result = [];
 		var currentExpression;
@@ -43,33 +44,28 @@ function($scope, $routeParams, teacherExpressions) {
 		return result;
 	};
 
-	function requestIncrement(exprId, incrementCallback){
-		//Mmmmh... I don't know... do I increment you?
-		// Ok, I'll increment you
-		incrementCallback();
-	};
-
 	/**
 	 * Factory function for creating new expressions.
 	 * The created expression exposes methods for obtaining the current count, and asking to increment it.
 	 * @param {String} exprText the text of the expression to create
 	 */
-	var newExpression = ( function() {
-			
-			return function(exprText, myId){
+	function newExpression(exprText, myId){
 				// hidden variable for the counter
 				var myCounter = 0;
 				
-				var incrementMe = function(){
+				function incrementMe(){
 					myCounter += 1;
 				};
 				
-				var getCount = function(){
+				function getCount(){
 					return myCounter;
 				};
 				
-				var askIncrement = function(){
-					requestIncrement(myId, incrementMe);
+				function askIncrement(){
+                    requestIncrement(myId,{
+                        "doIfAccepted": incrementMe,
+                        "doIfRejected": function(){console.log("Expression " + myId + " was rejected!")}
+                    });
 				};
 				
 				return {
@@ -78,12 +74,11 @@ function($scope, $routeParams, teacherExpressions) {
 					'getCount': getCount,
 					'askIncrement': askIncrement	
 				};
-			};
 			
-		}());
+		}
 	
 	//exposing the expressions of the teacher in scope
-	teacherExpressions(currentTeacherId)(function(expressionsData){	
+	fetchTeacherExpressions(currentTeacherId)(function(expressionsData){	
 		$scope.expressions = makeExpressions(expressionsData);
 	});
 		
