@@ -1,12 +1,7 @@
 App::Application.routes.draw do
-
-  get "events/new"
-
-  get "expressions/new"
-
-  get "teachers/new"
-
-  get "users/new"
+  resources :users, :teachers, :expressions, :events
+  
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
