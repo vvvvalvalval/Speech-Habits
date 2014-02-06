@@ -1,3 +1,14 @@
-<h1>
-  <%= @teacher.name %>
-</h1>
+<table class="profile">
+  <tr>
+    <td class="main">
+	<h1><%= @teacher.name  %></h1>
+	<h3 class="expression">Nouvelle expression</h1>
+	  <%= render 'shared/expression_form' %>
+      <% unless @teacher.expressions.empty? %>
+        <table class="expressions" summary="expressions du professeur">
+          <%= render @expressions %>
+        </table>
+      <% end %>
+    </td>
+  </tr>
+</table>
