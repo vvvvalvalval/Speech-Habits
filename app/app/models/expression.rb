@@ -2,7 +2,7 @@ class Expression < ActiveRecord::Base
   attr_accessible :content
   
   belongs_to :teacher
-  has_many :events, :dependent => :destroy
+  has_many :events
   
   validates :content, :presence => true,
                       :uniqueness => true
