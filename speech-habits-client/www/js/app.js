@@ -19,7 +19,10 @@ speechHabitsApp.config(['$routeProvider', function($routeProvider) {
 	}).when('/rooms/:teacherId',{
 		templateUrl : 'partials/room.html',
 		controller : 'roomController'
-	}).otherwise({
-		redirectTo : '/teachersList'
+	}).when('/login',{
+        templateUrl: "partials/login.html",
+        controller: 'loginController'
+    }).otherwise({
+		redirectTo : '/login'
 	});
 }]);

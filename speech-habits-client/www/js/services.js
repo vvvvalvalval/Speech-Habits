@@ -121,3 +121,31 @@ speechHabitsServices.factory('requestIncrement', ['$http', function ($http) {
 
     };
 }]);
+
+speechHabitsServices.factory('loggedInService',[function(){
+
+    var pseudo;
+
+    function hasLoggedIn(){
+        if(pseudo){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function getPseudo(){
+        return pseudo;
+    }
+
+    function setPseudo(newPseudo){
+        pseudo = newPseudo;
+    }
+
+    return {
+        'getPseudo': getPseudo,
+        'setPseudo': setPseudo,
+        'hasLoggedIn': hasLoggedIn
+    };
+
+}]);
