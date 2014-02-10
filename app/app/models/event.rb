@@ -1,5 +1,6 @@
 class Event < ActiveRecord::Base
-  attr_accessible :expr_id, :user_id, :teacher_id
+  attr_accessible :expression_id, :user_id
   
-  belongs_to :user, :teacher, :expression
+  belongs_to :user
+  belongs_to :expression
 end
