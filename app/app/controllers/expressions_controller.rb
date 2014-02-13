@@ -8,7 +8,7 @@ class ExpressionsController < ApplicationController
   end
   
   def create
-    @expression = teacher.expressions.build(params[:expressions])
+    @expression = teacher.build(params[:expressions])
     if @expression.save
       redirect_to @teacher
     else
