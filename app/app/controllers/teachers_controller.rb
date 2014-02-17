@@ -7,7 +7,7 @@ class TeachersController < ApplicationController
   def show
     @teacher = Teacher.find(params[:id])
     @expressions = @teacher.expressions
-    @expression = Expression.new(params[:teacher_id => :id])
+    @expression = Expression.new()
   end
   
   def new

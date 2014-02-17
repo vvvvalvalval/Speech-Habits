@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(:version => 20140203161102) do
 
   create_table "events", :force => true do |t|
-    t.integer  "expr_id"
+    t.integer  "expression_id"
     t.integer  "user_id"
     t.integer  "teacher_id"
     t.datetime "created_at"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20140203161102) do
 
   create_table "expressions", :force => true do |t|
     t.string   "content"
-    t.integer  "Belonging_teacher_id"
+    t.integer  "teacher_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
