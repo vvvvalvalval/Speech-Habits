@@ -10,12 +10,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140203161102) do
+ActiveRecord::Schema.define(:version => 20140218082151) do
 
   create_table "events", :force => true do |t|
     t.integer  "expression_id"
     t.integer  "user_id"
-    t.integer  "teacher_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

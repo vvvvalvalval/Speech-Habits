@@ -1,0 +1,13 @@
+<h1>Identification</h1>
+
+<%= form_for(:session, :url => sessions_path) do |f| %>
+  <div class="field">
+    <%= f.label :name, "Nom" %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit "S'identifier" %>
+  </div>
+<% end %>
+
+<p>Pas encore inscrit ? <%= link_to "S'inscrire !", signup_path %></p>

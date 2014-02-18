@@ -3,7 +3,7 @@
   <%= f.hidden_field :teacher_id, :value => @teacher.id %>
  
   <div class="field">
-    <%= f.text_area :content %>
+    <%= f.text_area :content, :cols => "40", :rows => "2"%>
   </div>
   <div class="actions">
     <%= f.submit "Soumettre" %> 

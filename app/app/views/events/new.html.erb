@@ -1,2 +1,15 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<h1>Nouvel event</h1>
+
+<%= form_for(@event) do |f| %>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :expression_id %><br />
+    <%= f.text_field :expression_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Soumettre" %> 
+  </div>
+<% end %>
