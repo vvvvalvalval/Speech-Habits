@@ -1,7 +1,7 @@
 class Expression < ActiveRecord::Base
   attr_accessible :content, :teacher_id
   
-  belongs_to :teacher
+  belongs_to :teacher, inverse_of: :expressions
   has_many :events
   
   validates :content, :presence => true,

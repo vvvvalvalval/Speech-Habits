@@ -2,13 +2,15 @@
   <tr>
     <td class="main">
 	<h1><%= @teacher.name  %></h1>
-	<h3 class="expression">Nouvelle expression</h1>
+	<h3 class="expression">Nouvelle expression</h3>
 	  <%= render 'shared/expression_form', :teacher_id => @teacher.id %>
-	  <% unless @teacher.expressions.empty? %>
-      	<table class="expressions" summary="expressions du prof">
-		  <%= render @expressions %>
-	  	</table>
-	  <% end %>
+	  
+	<h3>Expressions du professeur</h3>
+	<% unless @teacher.expressions.empty? %>
+      <table class="expressions" summary="expressions du prof">
+		<%= render @expressions %>
+	  </table>
+	<% end %>
     </td>
   </tr>
 </table>

@@ -10,7 +10,7 @@ class ExpressionsController < ApplicationController
   def create
     @expression = Expression.new(params[:expression])
     if @expression.save
-      redirect_to 'show'
+      redirect_to @expression.teacher
     else
       render 'show' 
     end
