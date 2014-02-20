@@ -1,7 +1,7 @@
 <tr>
-  <th class="expression">
+  <td class="expression">
     <span class="content"><%= expression.content %></span>
-  </th>
+  </td>
   <td>
 	<%= form_for @event do |f| %>
 		<%= f.hidden_field :expression_id, :value => expression.id %>

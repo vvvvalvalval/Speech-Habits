@@ -1,17 +1,20 @@
 class TeachersController < ApplicationController
   
   def index
+    @title = "liste des professeurs"
     @teachers = Teacher.all
   end
   
   def show
     @teacher = Teacher.find(params[:id])
+    @title = @teacher.name
     @expressions = @teacher.expressions
     @expression = Expression.new()
     @event = Event.new()
   end
   
   def new
+    @title = "Nouveau professeur"
     @teacher = Teacher.new
   end
   
