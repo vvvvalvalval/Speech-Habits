@@ -8,6 +8,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.find(params[:id])
     @expressions = @teacher.expressions
     @expression = Expression.new()
+    @event = Event.new()
   end
   
   def new
