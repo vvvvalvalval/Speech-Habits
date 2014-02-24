@@ -1,4 +1,6 @@
 class TeachersController < ApplicationController
+  before_filter :authenticate, :only => [:index, :create, :destroy]
+  before_filter :admin_user,   :only => :destroy
   
   def index
     @title = "liste des professeurs"
@@ -26,4 +28,17 @@ class TeachersController < ApplicationController
       render 'new'
     end
   end
+  
+  def destroy
+    Teacher.find(params[:id]).destroy
+    flash[:success] = "Professeur supprime"
+    redirect_back_or teachers_path
+  end
+  
+  private
+  
+    def admin_user
+      redirect_to(root_path) unless current_user.admin?
+    end
+  
 end

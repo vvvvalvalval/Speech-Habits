@@ -12,4 +12,11 @@
   <td>
 	<input type="text" size="10" name="score_<%= expression.id %>" id="score_<%= expression.id %>" value = <%= Event.count :conditions => { :expression_id => expression.id } %> style="background-color:#F0FFFF" onFocus="javascript: this.blur()">
   </td>
+  <% if current_user.admin? %>
+  <td>
+    <%= link_to "supprimer", expression, :method => :delete,
+                                	     :confirm => "Etes-vous certain ?",
+                                         :title => expression.content %>
+  </td>
+  <% end %>
 </tr>

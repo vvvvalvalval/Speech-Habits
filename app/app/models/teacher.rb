@@ -1,7 +1,7 @@
 class Teacher < ActiveRecord::Base
   attr_accessible :name
   
-  has_many :expressions, inverse_of: :teacher
+  has_many :expressions, :dependent => :destroy, inverse_of: :teacher
   
   validates :name, :presence => true,
                    :uniqueness => true
