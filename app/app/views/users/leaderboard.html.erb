@@ -1,0 +1,25 @@
+<h1>Leaderboard</h1>
+<%  i = 0 %>
+<% @users.sort_by!{|user| Event.count :conditions => { :user_id => user.id }}.reverse! %>
+<table>
+	<tr>
+		<th> Rank
+		</th>
+		<th> Utilisateur
+		</th>
+		<th> Score
+		</th>
+<% @users.each do |user| %>
+<% i = i+1 %>
+	<tr>
+		<td> <%= i %>
+		</td>
+		<td>
+			<%= link_to user.name, user %>
+		</td>
+		<td>
+			<%= Event.count :conditions => { :user_id => user.id } %>
+		</td>
+	</tr>
+<% end %>
+<table>

@@ -2,3 +2,10 @@
   <%= @user.name %>
 </h1>
 
+<p>
+	Vous avez repéré <%= Event.count :conditions => { :user_id => @user.id } %> expressions
+</p>
+
+<p> 
+	<%= link_to "Leaderboard", leaderboard_path %>
+</p>

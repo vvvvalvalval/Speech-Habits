@@ -34,6 +34,11 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
   
+  def leaderboard
+    @title = "Leaderboard"
+    @users = User.all
+  end
+  
   private
   
     def authenticate
