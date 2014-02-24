@@ -6,9 +6,12 @@
 	Choisissez un prof <%= link_to "ici", teachers_path%> !
 </p>
 <% else %>
-<p>
+<p><center>
   C'est la page d'accueil de l'application Speech Habits
-</p>
+</center></p>
 
 <%= link_to "S'inscrire !", signup_path, :class => "signup_button round" %>
+
+<p><center>Déjà inscrit ? <%= link_to "S'identifier !", signin_path %></center></p>
+
 <% end %>
