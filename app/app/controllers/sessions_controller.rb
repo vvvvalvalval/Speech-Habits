@@ -8,7 +8,6 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:session][:name])
     if user.nil?
       flash.now[:error] = "Utilisateur non enregistre"
-      @title = "Sign in"
       render 'new'
     else
       sign_in user

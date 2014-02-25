@@ -4,6 +4,12 @@
   <% @teachers.each do |teacher| %>
     <li>
       <%= link_to teacher.name, teacher %>
+	  <% if current_user.admin? %>
+	  	| <%= link_to "supprimer", teacher, :method => :delete, :confirm => "Etes-vous certain ?",
+                                :title => "Supprimer #{teacher.name}" %>
+	  <% end %>
     </li>
   <% end %>
 </ul>
+
+<%= link_to "Nouveau Professeur", "/teachers/new" %>

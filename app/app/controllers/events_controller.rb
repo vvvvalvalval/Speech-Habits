@@ -11,7 +11,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(params[:event])
     if @event.save
-      redirect_to @event
+      redirect_to @event.expression.teacher
     else
       render 'show'
     end

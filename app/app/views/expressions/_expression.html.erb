@@ -1,11 +1,22 @@
 <tr>
-  <th class="expression">
+  <td class="expression">
     <span class="content"><%= expression.content %></span>
-  </th>
+  </td>
   <td>
-	<input type="submit" name = <%= expression.id %> value="+1" id= <%= expression.id %> >
+	<%= form_for @event do |f| %>
+		<%= f.hidden_field :expression_id, :value => expression.id %>
+		<%= f.hidden_field :user_id, :value => current_user.id %>
+		<%= f.submit "+1" %>
+	<% end %>
   </td>
   <td>
 	<input type="text" size="10" name="score_<%= expression.id %>" id="score_<%= expression.id %>" value = <%= Event.count :conditions => { :expression_id => expression.id } %> style="background-color:#F0FFFF" onFocus="javascript: this.blur()">
   </td>
+  <% if current_user.admin? %>
+  <td>
+    <%= link_to "supprimer", expression, :method => :delete,
+                                	     :confirm => "Etes-vous certain ?",
+                                         :title => expression.content %>
+  </td>
+  <% end %>
 </tr>

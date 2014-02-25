@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessible :name
   
-  has_many :events, inverse_of: :user
+  has_many :events, :dependent => :destroy, inverse_of: :user
   
   validates :name, :presence => true,
                    :uniqueness => true
