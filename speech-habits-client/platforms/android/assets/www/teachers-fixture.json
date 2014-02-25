@@ -1,0 +1,64 @@
+[
+    {
+        "id": 0,
+        "name": "Philippe Ginier-Gillet",
+        "expressions": [
+            {
+                "id": 0,
+                "text": "Basically"
+            },
+            {
+                "id": 1,
+                "text": "By the way"
+            },
+            {
+                "id": 2,
+                "text": "Bloody hell"
+            },
+            {
+                "id": 3,
+                "text": "Somewhere somehow"
+            },
+            {
+                "id": 4,
+                "text": "You realize that"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Bruno Martinaud",
+        "expressions": [
+            {
+                "id": 5,
+                "text": "C'est très entrepreneurial"
+            },
+            {
+                "id": 6,
+                "text": "Silicon Valley"
+            },
+            {
+                "id": 7,
+                "text": "L'ADN de cette startup"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Chuck Norris",
+        "expressions": [
+            {
+                "id": 8,
+                "text": "Wesh"
+            },
+            {
+                "id": 9,
+                "text": "Nik sa reum"
+            },
+            {
+                "id": 10,
+                "text": "Pran sa dent ta gueule"
+            }
+        ]
+    }
+]
