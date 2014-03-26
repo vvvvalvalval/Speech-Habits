@@ -8,7 +8,8 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <div class="container">
+    <div class="container center-block">
+    <h1>Speech Habits</h1>
     <%= render 'layouts/header' %>
     <section class="round">
       <% flash.each do |key, value| %>
@@ -16,7 +17,6 @@
       <% end %>
       <%= yield %>
     </section>
-  <%= render 'layouts/footer' %>
   </div>
 </body>
 </html>

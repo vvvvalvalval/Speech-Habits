@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a98b9f83-9c15-4cb0-a746-489c24f25dc4" name="Default" comment="Factored out the (mock) increment request function into an AngularJS service.&#10;&#10;# Please enter the commit message for your changes. Lines starting&#10;# with '#' will be ignored, and an empty message aborts the commit.&#10;# On branch master&#10;# Changes to be committed:&#10;#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)&#10;#&#10;#&#9;modified:   speech-habits-client/www/js/controllers.js&#10;#&#9;modified:   speech-habits-client/www/js/services.js&#10;#&#9;deleted:    speech-habits-client/www/partials/partial1.html&#10;#&#9;deleted:    speech-habits-client/www/partials/partial2.html&#10;#&#9;modified:   speech-habits-client/www/partials/teachers_list.html&#10;#&#10;# Untracked files:&#10;#   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)&#10;#&#10;#&#9;speech-habits-client/www/teachers-fixture.json&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech-habits-client/www/js/controllers.js" afterPath="$PROJECT_DIR$/speech-habits-client/www/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech-habits_thin-mobile/platforms/android/bin/HelloWorld-debug-unaligned.apk" afterPath="$PROJECT_DIR$/speech-habits_thin-mobile/platforms/android/bin/HelloWorld-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech-habits_thin-mobile/platforms/android/bin/HelloWorld-debug.apk" afterPath="$PROJECT_DIR$/speech-habits_thin-mobile/platforms/android/bin/HelloWorld-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech-habits_thin-mobile/platforms/android/bin/HelloWorld.ap_" afterPath="$PROJECT_DIR$/speech-habits_thin-mobile/platforms/android/bin/HelloWorld.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech-habits_thin-mobile/platforms/android/bin/dexedLibs/classes-40aba381d79e5970a347159b683902cd.jar" afterPath="$PROJECT_DIR$/speech-habits_thin-mobile/platforms/android/bin/dexedLibs/classes-40aba381d79e5970a347159b683902cd.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech-habits_thin-mobile/platforms/android/CordovaLib/bin/classes.jar" afterPath="$PROJECT_DIR$/speech-habits_thin-mobile/platforms/android/CordovaLib/bin/classes.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech-habits_thin-mobile/platforms/android/CordovaLib/bin/build.prop" afterPath="$PROJECT_DIR$/speech-habits_thin-mobile/platforms/android/CordovaLib/bin/build.prop" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/speech-habits_thin-mobile/platforms/android/bin/build.prop" afterPath="$PROJECT_DIR$/speech-habits_thin-mobile/platforms/android/bin/build.prop" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="repo.iws" />
@@ -29,7 +35,7 @@
       <file leaf-file-name="my-js-tricks.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$USER_HOME$/Documents/programming-notes/Javascript/my-js-tricks.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="288" column="16" selection-start="10309" selection-end="10309" vertical-scroll-proportion="0.37931034" vertical-offset="871" max-vertical-offset="3258">
+            <state line="232" column="22" selection-start="8083" selection-end="8083" vertical-scroll-proportion="0.1306715" vertical-offset="0" max-vertical-offset="3258">
               <folding>
                 <element signature="e#22#3375#0" expanded="false" />
                 <element signature="e#3403#8055#0" expanded="false" />
@@ -363,7 +369,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="24" width="1313" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -695,7 +701,7 @@
     </entry>
     <entry file="file://$USER_HOME$/Documents/programming-notes/Javascript/my-js-tricks.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="288" column="16" selection-start="10309" selection-end="10309" vertical-scroll-proportion="0.37931034" vertical-offset="871" max-vertical-offset="3258">
+        <state line="232" column="22" selection-start="8083" selection-end="8083" vertical-scroll-proportion="0.1306715" vertical-offset="0" max-vertical-offset="3258">
           <folding>
             <element signature="e#22#3375#0" expanded="false" />
             <element signature="e#3403#8055#0" expanded="false" />

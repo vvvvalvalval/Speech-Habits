@@ -1,7 +1,7 @@
 <h1><%= @teacher.name  %></h1>
 <h3>Expressions du professeur</h3>
 <% unless @teacher.expressions.empty? %>
-	<table class="expressions" summary="expressions du prof">
+	<table class="expressions table" summary="expressions du prof">
 		<%= render @expressions %>
 	</table>
 <% end %>

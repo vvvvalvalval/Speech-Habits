@@ -1,19 +1,19 @@
-<tr>
-  <td class="expression">
+<tr class="row">
+  <td class="expression col-md-8">
     <span class="content"><%= expression.content %></span>
   </td>
-  <td>
+  <td class="col-md-2">
 	<%= form_for @event do |f| %>
 		<%= f.hidden_field :expression_id, :value => expression.id %>
 		<%= f.hidden_field :user_id, :value => current_user.id %>
-		<%= f.submit "+1" %>
+		<%= f.submit "+1", :class => "btn btn-default" %>
 	<% end %>
   </td>
-  <td>
+  <td class="col-md-1">
 	<input type="text" size="10" name="score_<%= expression.id %>" id="score_<%= expression.id %>" value = <%= Event.count :conditions => { :expression_id => expression.id } %> style="background-color:#F0FFFF" onFocus="javascript: this.blur()">
   </td>
   <% if current_user.admin? %>
-  <td>
+  <td class="col-md-1">
     <%= link_to "supprimer", expression, :method => :delete,
                                 	     :confirm => "Etes-vous certain ?",
                                          :title => expression.content %>

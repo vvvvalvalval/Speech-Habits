@@ -3,9 +3,9 @@
   <%= f.hidden_field :teacher_id, :value => @teacher.id %>
  
   <div class="field">
-    <%= f.text_field :content%>
+    <%= f.text_field :content, :class => "input-medium" %>
   </div>
   <div class="actions">
-    <%= f.submit "Soumettre" %> 
+    <%= f.submit "Soumettre", :class => "btn btn-default" %> 
   </div>
 <% end %>
