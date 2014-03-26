@@ -4,8 +4,6 @@
       <% if signed_in? %>
 	  <li><%= link_to "Profs", teachers_path %></li>
       <li><%= link_to "Leaderboard", leaderboard_path %></li>
-      <li><%= link_to "Profil", current_user %></li>
-      
       <% else %>
       <li><%= link_to "S'identifier", signin_path %></li>
       <% end %>
